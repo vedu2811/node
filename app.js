@@ -2,7 +2,8 @@
 const fs=require('fs')  // Module-1 : FILE SYSTEM
 const http = require('http') // Module-2 : HTTP
 const path = require('path') // Module-3 : PATH
-
+const os=require('os') // Module-4 : OS
+const { log } = require('console')
 
 //////////////////////////////////////////////////
 // Reading a file
@@ -51,3 +52,8 @@ const path = require('path') // Module-3 : PATH
 
 //////////////////////////////////////////////////
 // OS Module
+
+console.log('Platform: ',os.platform());
+console.log('CPU Architecture: ',os.arch());
+console.log('Total Memory: ',os.totalmem());
+console.log('Free Memory: ',os.freemem());
