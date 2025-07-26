@@ -53,7 +53,7 @@ const { log } = require('console')
 //////////////////////////////////////////////////
 // OS Module
 
-console.log('Platform: ',os.platform());
-console.log('CPU Architecture: ',os.arch());
-console.log('Total Memory: ',os.totalmem());
-console.log('Free Memory: ',os.freemem());
+// console.log('Platform: ',os.platform());
+// console.log('CPU Architecture: ',os.arch());
+// console.log('Total Memory: ',os.totalmem());
+// console.log('Free Memory: ',os.freemem());
