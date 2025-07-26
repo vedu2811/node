@@ -4,7 +4,7 @@ const http = require('http') // Module-2 : HTTP
 const path = require('path') // Module-3 : PATH
 const os=require('os') // Module-4 : OS
 const url = require('url') // Module-5 : URL
-const { log } = require('console')
+const  crypto = require('crypto') // Module-6 : Crypto
 
 //////////////////////////////////////////////////
 // Reading a file
@@ -62,7 +62,15 @@ const { log } = require('console')
 //////////////////////////////////////////////////
 // URL Module
 
-const myURL = new URL('https://example.com:8080/path/name?query=hello#hash')
-console.log('Host: ',myURL.host);
-console.log('Path Name: ',myURL.pathname);
-console.log('Search Params: ',myURL.searchParams.get('query'));
+// const myURL = new URL('https://example.com:8080/path/name?query=hello#hash')
+// console.log('Host: ',myURL.host);
+// console.log('Path Name: ',myURL.pathname);
+// console.log('Search Params: ',myURL.searchParams.get('query'));
+
+//////////////////////////////////////////////////
+// Crypto Module
+
+const hash=crypto.createHash('sha256');
+hash.update('Hello World!!')
+// hash.digest('hex')
+console.log(hash.digest('hex'));
