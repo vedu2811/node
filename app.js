@@ -9,12 +9,12 @@ const fs=require('fs')
 //     console.log(data);
 // })
 
-const content = "Hello, NodeJs"
+// const content = "Hello, NodeJs"
 
-fs.writeFile('output.txt',content, (err) => {
-    if(err){
-        console.error(err)
-        return;
-    }
-    console.log("File written successfully");
-})
+// fs.writeFile('output.txt',content, (err) => {
+//     if(err){
+//         console.error(err)
+//         return;
+//     }
+//     console.log("File written successfully");
+// })
