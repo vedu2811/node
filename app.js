@@ -1,5 +1,9 @@
 // console.log('Hello, dev');
 const fs=require('fs')
+const http = require('http')
+
+//////////////////////////////////////////////////
+// Reading a file
 
 // fs.readFile('example.txt','utf-8',(err,data)=>{
 //     if(err){
@@ -9,8 +13,10 @@ const fs=require('fs')
 //     console.log(data);
 // })
 
-// const content = "Hello, NodeJs"
+//////////////////////////////////////////////////
+// writing a new file
 
+// const content = "Hello, NodeJs"
 // fs.writeFile('output.txt',content, (err) => {
 //     if(err){
 //         console.error(err)
@@ -18,3 +24,16 @@ const fs=require('fs')
 //     }
 //     console.log("File written successfully");
 // })
+
+//////////////////////////////////////////////////
+// Creating a http server
+
+const server = http.createServer((req,res)=>{
+    res.statusCode=200;
+    res.setHeader('Content-Type','text/plain')
+    res.end("Hello, World")
+})
+
+server.listen(3000,()=>{
+    console.log("Server Running at http://localhost:3000")
+})
