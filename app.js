@@ -70,7 +70,7 @@ const  crypto = require('crypto') // Module-6 : Crypto
 //////////////////////////////////////////////////
 // Crypto Module
 
-const hash=crypto.createHash('sha256');
-hash.update('Hello World!!')
-// hash.digest('hex')
-console.log(hash.digest('hex'));
+// const hash=crypto.createHash('sha256');
+// hash.update('Hello World!!')
+// // hash.digest('hex')
+// console.log(hash.digest('hex'));
