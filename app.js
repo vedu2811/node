@@ -80,8 +80,8 @@ const math=require('./math')
 //////////////////////////////////////////////////
 // Creating our own module
 
-const msg=sayHello('Developers')
-console.log(msg);
+// const msg=sayHello('Developers')
+// console.log(msg);
 
-console.log(math.add(5,6));
-console.log(math.subtract(5,6));
+// console.log(math.add(5,6));
+// console.log(math.subtract(5,6));
