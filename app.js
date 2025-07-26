@@ -5,6 +5,7 @@ const path = require('path') // Module-3 : PATH
 const os=require('os') // Module-4 : OS
 const url = require('url') // Module-5 : URL
 const  crypto = require('crypto') // Module-6 : Crypto
+const sayHello = require('./greetings') // Our own Module
 
 //////////////////////////////////////////////////
 // Reading a file
@@ -74,3 +75,10 @@ const  crypto = require('crypto') // Module-6 : Crypto
 // hash.update('Hello World!!')
 // // hash.digest('hex')
 // console.log(hash.digest('hex'));
+
+//////////////////////////////////////////////////
+// Creating our own module
+
+const msg=sayHello('Developers')
+console.log(msg);
+
