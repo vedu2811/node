@@ -3,6 +3,7 @@ const fs=require('fs')  // Module-1 : FILE SYSTEM
 const http = require('http') // Module-2 : HTTP
 const path = require('path') // Module-3 : PATH
 const os=require('os') // Module-4 : OS
+const url = require('url') // Module-5 : URL
 const { log } = require('console')
 
 //////////////////////////////////////////////////
@@ -57,3 +58,11 @@ const { log } = require('console')
 // console.log('CPU Architecture: ',os.arch());
 // console.log('Total Memory: ',os.totalmem());
 // console.log('Free Memory: ',os.freemem());
+
+//////////////////////////////////////////////////
+// URL Module
+
+const myURL = new URL('https://example.com:8080/path/name?query=hello#hash')
+console.log('Host: ',myURL.host);
+console.log('Path Name: ',myURL.pathname);
+console.log('Search Params: ',myURL.searchParams.get('query'));
