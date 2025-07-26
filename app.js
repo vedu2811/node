@@ -3,6 +3,7 @@ const fs=require('fs')  // Module-1 : FILE SYSTEM
 const http = require('http') // Module-2 : HTTP
 const path = require('path') // Module-3 : PATH
 
+
 //////////////////////////////////////////////////
 // Reading a file
 
@@ -42,8 +43,11 @@ const path = require('path') // Module-3 : PATH
 //////////////////////////////////////////////////
 // Path Module
 
-const dir='/user/local'
-const fileName='example.text'
+// const dir='/user/local'
+// const fileName='example.text'
 
-const fullPath = path.join(dir,fileName)
-console.log(fullPath)
+// const fullPath = path.join(dir,fileName)
+// console.log(fullPath)
+
+//////////////////////////////////////////////////
+// OS Module
