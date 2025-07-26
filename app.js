@@ -1,6 +1,7 @@
 // console.log('Hello, dev');
 const fs=require('fs')  // Module-1 : FILE SYSTEM
 const http = require('http') // Module-2 : HTTP
+const path = require('path') // Module-3 : PATH
 
 //////////////////////////////////////////////////
 // Reading a file
@@ -37,3 +38,12 @@ const http = require('http') // Module-2 : HTTP
 // server.listen(3000,()=>{
 //     console.log("Server Running at http://localhost:3000")
 // })
+
+//////////////////////////////////////////////////
+// Path Module
+
+const dir='/user/local'
+const fileName='example.text'
+
+const fullPath = path.join(dir,fileName)
+console.log(fullPath)
