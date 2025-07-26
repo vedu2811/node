@@ -6,6 +6,7 @@ const os=require('os') // Module-4 : OS
 const url = require('url') // Module-5 : URL
 const  crypto = require('crypto') // Module-6 : Crypto
 const sayHello = require('./greetings') // Our own Module
+const math=require('./math')
 
 //////////////////////////////////////////////////
 // Reading a file
@@ -82,3 +83,5 @@ const sayHello = require('./greetings') // Our own Module
 const msg=sayHello('Developers')
 console.log(msg);
 
+console.log(math.add(5,6));
+console.log(math.subtract(5,6));
