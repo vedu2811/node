@@ -1,6 +1,6 @@
 // console.log('Hello, dev');
-const fs=require('fs')
-const http = require('http')
+const fs=require('fs')  // Module-1 : FILE SYSTEM
+const http = require('http') // Module-2 : HTTP
 
 //////////////////////////////////////////////////
 // Reading a file
@@ -28,12 +28,12 @@ const http = require('http')
 //////////////////////////////////////////////////
 // Creating a http server
 
-const server = http.createServer((req,res)=>{
-    res.statusCode=200;
-    res.setHeader('Content-Type','text/plain')
-    res.end("Hello, World")
-})
+// const server = http.createServer((req,res)=>{
+//     res.statusCode=200;
+//     res.setHeader('Content-Type','text/plain')
+//     res.end("Hello, World")
+// })
 
-server.listen(3000,()=>{
-    console.log("Server Running at http://localhost:3000")
-})
+// server.listen(3000,()=>{
+//     console.log("Server Running at http://localhost:3000")
+// })
