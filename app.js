@@ -170,9 +170,9 @@ const lodash = require('lodash')
 // const files=fs.readdirSync('./')
 // console.log('Directory Content', files);
 
-const dirName='newDir3'
-if(fs.existsSync(dirName)){
-    console.log('Dir Exists');
-}else{
-    console.log('Dir does not exist');
-}
+// const dirName='newDir3'
+// if(fs.existsSync(dirName)){
+//     console.log('Dir Exists');
+// }else{
+//     console.log('Dir does not exist');
+// }
