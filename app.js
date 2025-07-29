@@ -167,3 +167,5 @@ const lodash = require('lodash')
 //     console.log('directory content: ',files);
 // })
 
+const files=fs.readdirSync('./')
+console.log('Directory Content', files);
