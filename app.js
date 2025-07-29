@@ -198,9 +198,10 @@ const lodash = require('lodash')
 //     console.log('Directory Renamed successfully');
 // })
 
-// fs.stat('./',(err,stats)=>{
-//     if(err){
-//         return console.error(err);
-//     }
-//     console.log('Directory Stats: ',stats);
-// })
+fs.stat('./',(err,stats)=>{
+    if(err){
+        return console.error(err);
+    }
+    console.log('Directory Stats: ',stats);
+    console.log('is Directory? : ',stats.isDirectory());
+})
