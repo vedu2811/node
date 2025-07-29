@@ -122,11 +122,11 @@ const lodash = require('lodash')
 ///////////////////////////////////////////////////
 // PIPING
 
-const readableStream=fs.createReadStream('example.txt');
-const writableStream=fs.createWriteStream('example-copy.txt');
+// const readableStream=fs.createReadStream('example.txt');
+// const writableStream=fs.createWriteStream('example-copy.txt');
 
-readableStream.pipe(writableStream);
+// readableStream.pipe(writableStream);
 
-writableStream.on('finish',()=>{
-    console.log('File Copied Successfully');
-})
+// writableStream.on('finish',()=>{
+//     console.log('File Copied Successfully');
+// })
