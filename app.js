@@ -108,3 +108,14 @@ const lodash = require('lodash')
 // readableStream.on('error',(err)=>{
 //     console.error('Error: ',err);
 // })
+
+const writableStream = fs.createWriteStream('output2.txt')
+
+writableStream.write('Hello, ');
+writableStream.write('World!');
+writableStream.end();
+
+writableStream.on('finish',()=>{
+    console.log('Finished writing the file');
+    
+})
