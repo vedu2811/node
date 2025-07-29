@@ -190,3 +190,11 @@ const lodash = require('lodash')
 //     }
 //     console.log('Dir removed successfully');
 // })
+
+fs.rename('folder','dir',(err)=>{
+    if(err){
+        return console.error('Error: ',err)
+    }
+    console.log('Directory Renamed successfully');
+    
+})
