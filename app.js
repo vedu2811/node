@@ -156,4 +156,6 @@ fs.mkdir('newDir',(err)=>{
     console.log('Directory created successfully');
 })
 
-
+// Sync
+fs.mkdirSync('newDir2')
+console.log('Directory Created Successfully');
