@@ -148,14 +148,14 @@ const lodash = require('lodash')
 ///////////////////////////////////////////////////
 // Working with Directories
 
-// Async
-fs.mkdir('newDir',(err)=>{
-    if(err){
-        return console.error('Error creating directory: ',err)
-    }
-    console.log('Directory created successfully');
-})
+// // Async
+// fs.mkdir('newDir',(err)=>{
+//     if(err){
+//         return console.error('Error creating directory: ',err)
+//     }
+//     console.log('Directory created successfully');
+// })
 
-// Sync
-fs.mkdirSync('newDir2')
-console.log('Directory Created Successfully');
+// // Sync
+// fs.mkdirSync('newDir2')
+// console.log('Directory Created Successfully');
