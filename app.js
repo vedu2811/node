@@ -176,3 +176,10 @@ const lodash = require('lodash')
 // }else{
 //     console.log('Dir does not exist');
 // }
+
+fs.rmdir('newDir2',(err)=>{
+    if(err){
+        return console.error('Error: ',err)
+    }
+    console.log('Dir removed successfully');
+})
