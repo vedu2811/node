@@ -183,3 +183,10 @@ const lodash = require('lodash')
 //     }
 //     console.log('Dir removed successfully');
 // })
+
+fs.rm('newDir',{recursive: true},(err)=>{
+    if(err){
+        return console.error('Error: ',err)
+    }
+    console.log('Dir removed successfully');
+})
