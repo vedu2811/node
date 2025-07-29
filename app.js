@@ -109,13 +109,12 @@ const lodash = require('lodash')
 //     console.error('Error: ',err);
 // })
 
-const writableStream = fs.createWriteStream('output2.txt')
+// const writableStream = fs.createWriteStream('output2.txt')
 
-writableStream.write('Hello, ');
-writableStream.write('World!');
-writableStream.end();
+// writableStream.write('Hello, ');
+// writableStream.write('World!');
+// writableStream.end();
 
-writableStream.on('finish',()=>{
-    console.log('Finished writing the file');
-    
-})
+// writableStream.on('finish',()=>{
+//     console.log('Finished writing the file');
+// })
