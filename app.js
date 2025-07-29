@@ -87,6 +87,6 @@ const lodash = require('lodash')
 // console.log(math.add(5,6));
 // console.log(math.subtract(5,6));
 
-const numbers=[1,2,3,4,5]
-const reverse = lodash.reverse(numbers);
-console.log(reverse);
+// const numbers=[1,2,3,4,5]
+// const reverse = lodash.reverse(numbers);
+// console.log(reverse);
