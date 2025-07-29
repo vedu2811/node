@@ -130,3 +130,17 @@ const lodash = require('lodash')
 // writableStream.on('finish',()=>{
 //     console.log('File Copied Successfully');
 // })
+
+///////////////////////////////////////////////////
+// Performing operations on a LARGE FILE (readline)
+
+const readline = require('readline') // Import
+const readableStream=fs.createReadStream('example.txt')
+const rl=readline.createInterface({input:readableStream})
+
+rl.on('line',(line)=>{
+    console.log('Line: ',line);
+})
+rl.on('close',()=>{
+    console.log('Finished Processing the file');
+})
