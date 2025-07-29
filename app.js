@@ -87,6 +87,24 @@ const lodash = require('lodash')
 // console.log(math.add(5,6));
 // console.log(math.subtract(5,6));
 
+//////////////////////////////////////////////////
+// Using a package
+
 // const numbers=[1,2,3,4,5]
 // const reverse = lodash.reverse(numbers);
 // console.log(reverse);
+
+//////////////////////////////////////////////////
+// FILE STREAMS
+
+const readableStream = fs.createReadStream('example.txt',{encoding:'utf8'})
+
+readableStream.on('data',(chunk)=>{
+    console.log(chunk);
+})
+readableStream.on('end',()=>{
+    console.log('Finished Reading the file');
+})
+readableStream.on('error',(err)=>{
+    console.error('Error: ',err);
+})
