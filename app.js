@@ -97,14 +97,14 @@ const lodash = require('lodash')
 //////////////////////////////////////////////////
 // FILE STREAMS
 
-const readableStream = fs.createReadStream('example.txt',{encoding:'utf8'})
+// const readableStream = fs.createReadStream('example.txt',{encoding:'utf8'})
 
-readableStream.on('data',(chunk)=>{
-    console.log(chunk);
-})
-readableStream.on('end',()=>{
-    console.log('Finished Reading the file');
-})
-readableStream.on('error',(err)=>{
-    console.error('Error: ',err);
-})
+// readableStream.on('data',(chunk)=>{
+//     console.log(chunk);
+// })
+// readableStream.on('end',()=>{
+//     console.log('Finished Reading the file');
+// })
+// readableStream.on('error',(err)=>{
+//     console.error('Error: ',err);
+// })
