@@ -206,9 +206,9 @@ const lodash = require('lodash')
 //     console.log('is Directory? : ',stats.isDirectory());
 // })
 
-fs.watch('./',(eventType,filename)=>{
-    console.log(`Event: ${eventType}`);
-    if(filename){
-        console.log(`File name: ${filename}`);   
-    }
-})
+// fs.watch('./',(eventType,filename)=>{
+//     console.log(`Event: ${eventType}`);
+//     if(filename){
+//         console.log(`File name: ${filename}`);   
+//     }
+// })
