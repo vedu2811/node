@@ -1,22 +1,16 @@
 const http=require('http')
+const url = require('url')
 
 const server = http.createServer((req,res)=>{
-    // Request is POST Method
-    if(req.method==='POST' && req.url==='/submit'){
-
-        let body=''
-
-        req.on('data',(chunk)=>{
-            body+=chunk.toString()
-        })
-
-        req.on('end',()=>{
-            res.writeHead(200,{'content-type':'application/json'})
-            res.end(JSON.stringify({message:'Data received',data:body}))
-        })
+    // Query Handling
+    if(req.method==='GET' && req.url.startsWith('/search')){
+        
+        const queryObject=url.parse(req.url,true).query
+        res.writeHead(200,{'content-type':'application/json'})
+        res.end(JSON.stringify({message:'Query received',queryObject}))
 
     } else{
-        res.writeHead(404,{"content-type":'text/plain'})
+        res.writeHead(404,{'content-type':'text/plain'})
         res.end('Route Not Found')
     }
 })
