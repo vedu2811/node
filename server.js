@@ -6,7 +6,11 @@ const server = http.createServer((req,res)=>{
     if(req.method==='GET' && req.url.startsWith('/search')){
         
         const queryObject=url.parse(req.url,true).query
-        res.writeHead(200,{'content-type':'application/json'})
+        res.writeHead(200,
+            {'content-type':'application/json',
+            'custom-header':'NODE JS Server',
+            'custom-tracking':'1234'
+        })
         res.end(JSON.stringify({message:'Query received',queryObject}))
 
     } else{
