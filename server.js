@@ -17,6 +17,12 @@ const url = require('url')
 //     },
 // }
 
+// Middleware Function for logging requests
+const logRequest = ((req,res,next) => {
+    console.log(`${req.method} request made to ${req.url}`);
+    next()
+})
+
 const server = http.createServer((req,res)=>{
     
 
