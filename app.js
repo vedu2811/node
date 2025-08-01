@@ -212,3 +212,14 @@ const lodash = require('lodash')
 //         console.log(`File name: ${filename}`);   
 //     }
 // })
+
+const eventEmitter = require('events')
+const { emit } = require('process')
+
+const emitter = new eventEmitter()
+
+// Registering an Event Listener
+emitter.on('test1',()=>{
+    console.log('An event has occured');
+})
+emitter.emit('test1')
