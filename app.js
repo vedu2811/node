@@ -222,7 +222,9 @@ const emitter = new eventEmitter()
 emitter.on('test1',()=>{
     console.log('An event has occured in test1');
 })
-emitter.on('test1',()=>{
-    console.log('An event has occured in test2');
-})
+// emitter.on('test1',()=>{
+//     console.log('An event has occured in test2');
+// })
+emitter.emit('test1')
+emitter.removeListener('test1')
 emitter.emit('test1')
