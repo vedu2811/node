@@ -6,7 +6,15 @@ const route = {
     '/':(req,res)=>{
         res.writeHead(200,{'content-type':'text/plain'})
         res.end('Welcome to HomePage')
-    }
+    },
+    '/about':(req,res)=>{
+        res.writeHead(200,{'content-type':'text/plain'})
+        res.end('This is About Page')
+    },
+    '/notfound':(req,res)=>{
+        res.writeHead(404,{'content-type':'text/plain'})
+        res.end('Page Not Found')
+    },
 }
 
 const server = http.createServer((req,res)=>{
