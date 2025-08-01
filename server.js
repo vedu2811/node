@@ -1,8 +1,15 @@
 const http=require('http')
 const url = require('url')
 
+// Route Handler
+const route = {
+    '/':(req,res)=>{
+        res.writeHead(200,{'content-type':'text/plain'})
+        res.end('Welcome to HomePage')
+    }
+}
+
 const server = http.createServer((req,res)=>{
-    // Query Handling
     if(req.method==='GET' && req.url.startsWith('/search')){
         
         const queryObject=url.parse(req.url,true).query
