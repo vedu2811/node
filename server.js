@@ -1,5 +1,6 @@
 const http=require('http')
 const url = require('url')
+const queryString=require('querystring')
 
 // Route Handler
 // const routes = {
@@ -24,7 +25,18 @@ const url = require('url')
 // })
 
 const server = http.createServer((req,res)=>{
-    
+    if(req.method==='POST' && req.url==='/submit'){
+        let data =''
+
+        req.on('data',(chunk)=>{
+            data+=chunk
+        })
+        req.on('end',()=>{
+            const parsedData=queryString.parse(data)
+            res.writeHead(200,{'content-type':'application/json'})
+            res.end(JSON.stringify({message:'Form data received',parsedData}))
+        })
+    }
 })
 
 const port=3000
