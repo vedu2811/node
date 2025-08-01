@@ -218,13 +218,25 @@ const { emit } = require('process')
 
 const emitter = new eventEmitter()
 
+////////////////////////////////////////////////////////
 // Registering an Event Listener
 emitter.on('test1',()=>{
     console.log('An event has occured in test1');
 })
+
 // emitter.on('test1',()=>{
 //     console.log('An event has occured in test2');
 // })
-emitter.emit('test1')
-emitter.removeListener('test1')
-emitter.emit('test1')
+
+emitter.on('error',(err)=>{
+    console.error('Error Event: ',err.message)
+})
+
+
+try{
+    emitter.emit('test1')
+    emitter.removeListener('test1')
+    emitter.emit('test1')
+}catch(error){
+    emitter.emit('error',error)
+}
