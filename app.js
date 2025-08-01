@@ -220,6 +220,9 @@ const emitter = new eventEmitter()
 
 // Registering an Event Listener
 emitter.on('test1',()=>{
-    console.log('An event has occured');
+    console.log('An event has occured in test1');
+})
+emitter.on('test1',()=>{
+    console.log('An event has occured in test2');
 })
 emitter.emit('test1')
